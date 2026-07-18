@@ -521,6 +521,32 @@ footer {
   font-size: 10px;
 }
 
+footer > div,
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #f7faf9;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
+}
+
+.footer-links svg {
+  width: 16px;
+  height: 16px;
+}
+
 .is-running .metric strong {
   animation: pulse 0.7s ease-in-out infinite alternate;
 }
@@ -569,6 +595,13 @@ footer {
   footer {
     align-items: flex-start;
     flex-direction: column;
+  }
+
+  footer > div,
+  .footer-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .app-header {

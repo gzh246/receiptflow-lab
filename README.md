@@ -7,7 +7,8 @@ human review instead of guessing or creating a duplicate expense.
 
 ![ReceiptFlow Lab dashboard](web/dashboard_preview.png)
 
-**Explore:** [decision engine](receipt_matcher.py) ·
+**Explore:** [live demo](https://gzh246.github.io/receiptflow-lab/) ·
+[decision engine](receipt_matcher.py) ·
 [synthetic input](sample_data.json) · [generated decisions](demo_output.json) ·
 [dashboard source](web/) · [implementation options](#need-a-production-version)
 
