@@ -1,0 +1,162 @@
+{
+  "generated_from": "Synthetic portfolio data only",
+  "decision_policy": {
+    "date_window_days": 5,
+    "amount_tolerance": "0.01",
+    "auto_match_threshold": 0.84,
+    "ambiguity_margin": 0.12
+  },
+  "summary": {
+    "receipts": 5,
+    "auto_matched": 2,
+    "manual_review": 3
+  },
+  "decisions": [
+    {
+      "receipt_id": "R-1042",
+      "status": "auto_match",
+      "matched_expense_id": "EX-771",
+      "confidence": 0.935,
+      "reasons": [
+        "One unattached expense passed every deterministic gate.",
+        "The next action may upload the receipt and update that existing expense with the mapped client."
+      ],
+      "candidates": [
+        {
+          "expense_id": "EX-771",
+          "score": 0.935,
+          "days_apart": 1,
+          "amount_delta": "0.00",
+          "client_state": "client unset"
+        }
+      ],
+      "idempotency_key": "3c159a2709516fa7ea88d3f6319626076793be01cded5877364850f720541fbe",
+      "dropbox_folder": "/2026 Expenses/07 July/",
+      "receipt": {
+        "receipt_id": "R-1042",
+        "message_id": "<gmail-1042@example.test>",
+        "attachment_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "expense_date": "2026-07-14",
+        "amount": "86.40",
+        "currency": "USD",
+        "client_alias": "Northwind Retail",
+        "freshbooks_client_id": "FB-101"
+      }
+    },
+    {
+      "receipt_id": "R-1043",
+      "status": "manual_review_ambiguous",
+      "matched_expense_id": null,
+      "confidence": 0.98,
+      "reasons": [
+        "Top candidates are separated by only 0.045.",
+        "The workflow must not guess when two bank-feed expenses are plausible."
+      ],
+      "candidates": [
+        {
+          "expense_id": "EX-772",
+          "score": 0.98,
+          "days_apart": 0,
+          "amount_delta": "0.00",
+          "client_state": "client unset"
+        },
+        {
+          "expense_id": "EX-773",
+          "score": 0.935,
+          "days_apart": 1,
+          "amount_delta": "0.00",
+          "client_state": "client unset"
+        }
+      ],
+      "idempotency_key": "0e2d9ff3eae7c90267b4edb4ec07649d4bc662eeba3be0f7b087bff559a2d8d5",
+      "dropbox_folder": "/2026 Expenses/07 July/",
+      "receipt": {
+        "receipt_id": "R-1043",
+        "message_id": "<gmail-1043@example.test>",
+        "attachment_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "expense_date": "2026-07-15",
+        "amount": "15.00",
+        "currency": "USD",
+        "client_alias": "Canvas Studio",
+        "freshbooks_client_id": "FB-208"
+      }
+    },
+    {
+      "receipt_id": "R-1044",
+      "status": "manual_review_no_match",
+      "matched_expense_id": null,
+      "confidence": 0.0,
+      "reasons": [
+        "No unattached expense passed currency, amount, client, and date gates.",
+        "Preserve the receipt and extracted fields for manual review; do not create a duplicate expense."
+      ],
+      "candidates": [],
+      "idempotency_key": "402f89c66a4ab8b2ff15c9bbd06e945a42d0513fd921e41a4d0829b90dd0c927",
+      "dropbox_folder": "/2026 Expenses/07 July/",
+      "receipt": {
+        "receipt_id": "R-1044",
+        "message_id": "<gmail-1044@example.test>",
+        "attachment_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "expense_date": "2026-07-10",
+        "amount": "219.50",
+        "currency": "USD",
+        "client_alias": "Harbor Hotel",
+        "freshbooks_client_id": "FB-305"
+      }
+    },
+    {
+      "receipt_id": "R-1045",
+      "status": "manual_review_no_match",
+      "matched_expense_id": null,
+      "confidence": 0.0,
+      "reasons": [
+        "No unattached expense passed currency, amount, client, and date gates.",
+        "Preserve the receipt and extracted fields for manual review; do not create a duplicate expense."
+      ],
+      "candidates": [],
+      "idempotency_key": "c37f22c019e4ac7ee2b2c1ad21db73e6a0604b05ed3bc45e890341825f408d44",
+      "dropbox_folder": "/2026 Expenses/07 July/",
+      "receipt": {
+        "receipt_id": "R-1045",
+        "message_id": "<gmail-1045@example.test>",
+        "attachment_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "expense_date": "2026-07-12",
+        "amount": "44.00",
+        "currency": "USD",
+        "client_alias": "Nimbus Hosting",
+        "freshbooks_client_id": "FB-401"
+      }
+    },
+    {
+      "receipt_id": "R-1046",
+      "status": "auto_match",
+      "matched_expense_id": "EX-775",
+      "confidence": 1.0,
+      "reasons": [
+        "One unattached expense passed every deterministic gate.",
+        "The next action may upload the receipt and update that existing expense with the mapped client."
+      ],
+      "candidates": [
+        {
+          "expense_id": "EX-775",
+          "score": 1.0,
+          "days_apart": 0,
+          "amount_delta": "0.00",
+          "client_state": "same client"
+        }
+      ],
+      "idempotency_key": "2e74e1bbdb502fbe56ac3c36eeb928dab4328e987ee5a3cf205b3df3a6feb315",
+      "dropbox_folder": "/2026 Expenses/07 July/",
+      "receipt": {
+        "receipt_id": "R-1046",
+        "message_id": "<gmail-1046@example.test>",
+        "attachment_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "expense_date": "2026-07-16",
+        "amount": "32.80",
+        "currency": "USD",
+        "client_alias": "Metro Rail",
+        "freshbooks_client_id": "FB-512"
+      }
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "receipts": [
+    {
+      "receipt_id": "R-1042",
+      "message_id": "<gmail-1042@example.test>",
+      "attachment_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "expense_date": "2026-07-14",
+      "amount": "86.40",
+      "currency": "USD",
+      "client_alias": "Northwind Retail",
+      "freshbooks_client_id": "FB-101"
+    },
+    {
+      "receipt_id": "R-1043",
+      "message_id": "<gmail-1043@example.test>",
+      "attachment_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "expense_date": "2026-07-15",
+      "amount": "15.00",
+      "currency": "USD",
+      "client_alias": "Canvas Studio",
+      "freshbooks_client_id": "FB-208"
+    },
+    {
+      "receipt_id": "R-1044",
+      "message_id": "<gmail-1044@example.test>",
+      "attachment_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "expense_date": "2026-07-10",
+      "amount": "219.50",
+      "currency": "USD",
+      "client_alias": "Harbor Hotel",
+      "freshbooks_client_id": "FB-305"
+    },
+    {
+      "receipt_id": "R-1045",
+      "message_id": "<gmail-1045@example.test>",
+      "attachment_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "expense_date": "2026-07-12",
+      "amount": "44.00",
+      "currency": "USD",
+      "client_alias": "Nimbus Hosting",
+      "freshbooks_client_id": "FB-401"
+    },
+    {
+      "receipt_id": "R-1046",
+      "message_id": "<gmail-1046@example.test>",
+      "attachment_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "expense_date": "2026-07-16",
+      "amount": "32.80",
+      "currency": "USD",
+      "client_alias": "Metro Rail",
+      "freshbooks_client_id": "FB-512"
+    }
+  ],
+  "expenses": [
+    {
+      "expense_id": "EX-771",
+      "expense_date": "2026-07-13",
+      "amount": "86.40",
+      "currency": "USD",
+      "client_id": null,
+      "has_attachment": false
+    },
+    {
+      "expense_id": "EX-772",
+      "expense_date": "2026-07-15",
+      "amount": "15.00",
+      "currency": "USD",
+      "client_id": null,
+      "has_attachment": false
+    },
+    {
+      "expense_id": "EX-773",
+      "expense_date": "2026-07-14",
+      "amount": "15.00",
+      "currency": "USD",
+      "client_id": null,
+      "has_attachment": false
+    },
+    {
+      "expense_id": "EX-774",
+      "expense_date": "2026-07-12",
+      "amount": "44.00",
+      "currency": "USD",
+      "client_id": "FB-401",
+      "has_attachment": true
+    },
+    {
+      "expense_id": "EX-775",
+      "expense_date": "2026-07-16",
+      "amount": "32.80",
+      "currency": "USD",
+      "client_id": "FB-512",
+      "has_attachment": false
+    },
+    {
+      "expense_id": "EX-776",
+      "expense_date": "2026-07-09",
+      "amount": "129.50",
+      "currency": "USD",
+      "client_id": null,
+      "has_attachment": false
+    },
+    {
+      "expense_id": "EX-777",
+      "expense_date": "2026-07-14",
+      "amount": "86.40",
+      "currency": "EUR",
+      "client_id": null,
+      "has_attachment": false
+    }
+  ]
+}

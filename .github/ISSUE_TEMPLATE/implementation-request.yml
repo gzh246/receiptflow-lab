@@ -1,0 +1,52 @@
+name: Implementation request
+description: Share a public-safe outline for a similar automation or integration.
+title: "[Implementation] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide only information that is safe to publish. Do not include credentials, customer data, receipts, proprietary documents, or security-sensitive details.
+        If you discovered this project through Upwork or another marketplace, please continue all communication and contracting on that original platform.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: What manual process or reliability problem should the implementation solve?
+      placeholder: We want incoming receipts matched to existing expenses, with uncertain cases routed for approval.
+    validations:
+      required: true
+  - type: input
+    id: systems
+    attributes:
+      label: Systems involved
+      description: List platforms only; do not include account details or tokens.
+      placeholder: Gmail, Dropbox, FreshBooks, Make
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Current workflow and scope
+      description: Briefly describe the existing process, volume, and the smallest useful first milestone.
+    validations:
+      required: true
+  - type: dropdown
+    id: timeline
+    attributes:
+      label: Preferred timeline
+      options:
+        - Within 1 week
+        - Within 2-4 weeks
+        - More than 1 month
+        - Exploring options
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public-data confirmation
+      options:
+        - label: I have not included credentials, personal data, receipts, or proprietary documents.
+          required: true
+        - label: If this inquiry originated on a marketplace, I will continue communication and contracting on that platform.
+          required: true

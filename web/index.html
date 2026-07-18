@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self'; img-src 'self' data:; connect-src 'self'; object-src 'none'; base-uri 'self'">
+  <title>ReceiptFlow Lab</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand-block">
+      <div class="brand-mark" aria-hidden="true">RF</div>
+      <div>
+        <h1>ReceiptFlow Lab</h1>
+        <p>Receipt matching and review control</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <span class="sample-label">Synthetic portfolio data</span>
+      <button id="run-button" class="primary-button" type="button">
+        <i data-lucide="play" aria-hidden="true"></i>
+        <span>Run simulation</span>
+      </button>
+    </div>
+  </header>
+
+  <section class="metrics-band" aria-label="Workflow summary">
+    <div class="metric">
+      <span class="metric-label">Receipts processed</span>
+      <strong id="metric-total">-</strong>
+      <small>Current sample batch</small>
+    </div>
+    <div class="metric metric-success">
+      <span class="metric-label">Auto matched</span>
+      <strong id="metric-auto">-</strong>
+      <small>Unique deterministic match</small>
+    </div>
+    <div class="metric metric-review">
+      <span class="metric-label">Manual review</span>
+      <strong id="metric-review">-</strong>
+      <small>No guessing or duplicates</small>
+    </div>
+    <div class="policy-summary">
+      <span>Decision policy</span>
+      <code id="policy-text">Loading...</code>
+    </div>
+  </section>
+
+  <main class="workspace">
+    <section class="queue-pane" aria-labelledby="queue-title">
+      <div class="pane-heading">
+        <div>
+          <h2 id="queue-title">Receipt queue</h2>
+          <p>Select a row to inspect the evidence behind its decision.</p>
+        </div>
+        <div class="legend" aria-label="Status legend">
+          <span><b class="legend-dot success"></b>Auto match</span>
+          <span><b class="legend-dot review"></b>Review</span>
+        </div>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Receipt</th>
+              <th scope="col">Client</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Date</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody id="receipt-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="detail-pane" aria-labelledby="detail-title">
+      <div class="pane-heading detail-heading">
+        <div>
+          <span class="eyebrow">Decision inspection</span>
+          <h2 id="detail-title">Select a receipt</h2>
+        </div>
+        <span id="detail-status" class="status-pill neutral">Waiting</span>
+      </div>
+
+      <section class="field-grid" aria-label="Extracted receipt fields">
+        <div><span>Amount</span><strong id="detail-amount">-</strong></div>
+        <div><span>Expense date</span><strong id="detail-date">-</strong></div>
+        <div><span>Client mapping</span><strong id="detail-client">-</strong></div>
+        <div><span>Confidence</span><strong id="detail-confidence">-</strong></div>
+      </section>
+
+      <section class="detail-section">
+        <h3>Candidate expenses</h3>
+        <div id="candidate-list" class="candidate-list"></div>
+      </section>
+
+      <section class="detail-section">
+        <h3>Decision rationale</h3>
+        <ul id="reason-list" class="reason-list"></ul>
+      </section>
+
+      <section class="control-strip" aria-label="Operational controls">
+        <div>
+          <i data-lucide="folder" aria-hidden="true"></i>
+          <span>Dropbox folder</span>
+          <code id="dropbox-path">-</code>
+        </div>
+        <div>
+          <i data-lucide="fingerprint" aria-hidden="true"></i>
+          <span>Idempotency key</span>
+          <code id="idempotency-key">-</code>
+        </div>
+      </section>
+    </aside>
+  </main>
+
+  <section class="flow-band" aria-labelledby="flow-title">
+    <div class="flow-heading">
+      <span class="eyebrow">Production boundary</span>
+      <h2 id="flow-title">One guarded vertical slice</h2>
+    </div>
+    <ol class="flow-list">
+      <li><i data-lucide="mail" aria-hidden="true"></i><span>Gmail attachment</span></li>
+      <li><i data-lucide="archive" aria-hidden="true"></i><span>Dropbox archive</span></li>
+      <li><i data-lucide="scan-text" aria-hidden="true"></i><span>OCR extraction</span></li>
+      <li><i data-lucide="search" aria-hidden="true"></i><span>Expense candidates</span></li>
+      <li><i data-lucide="git-branch" aria-hidden="true"></i><span>Decision gate</span></li>
+      <li><i data-lucide="paperclip" aria-hidden="true"></i><span>Attach or review</span></li>
+    </ol>
+  </section>
+
+  <footer>
+    <span>Credential-free technical demonstration</span>
+    <span>FreshBooks and Make.com integration points are documented, not simulated as live access.</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
